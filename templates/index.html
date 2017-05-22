@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Redditlytics</h1>
+
+    {% if top_titles %}
+    <ul class="list">
+	     {% for t in top_titles %}
+	      <li>{{t}}</li>
+	     {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    
+{% endblock %}

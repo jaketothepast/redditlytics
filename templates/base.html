@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="{{ url_for('static', filename='app.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <a>Home</a>
+      <a href='/r/aww/comments'>Comment Analysis</a>
+      <a>Post Analysis</a>
+      <a>Comment Warnings</a>
+      <a href="#">Trending Analysis</a>
+      <a id="test" href="#">Test websocket connection</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+  </body>
+
+</html>
