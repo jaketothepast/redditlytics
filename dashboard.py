@@ -17,7 +17,9 @@ def handle_stream(message):
     print("Got the stream connection")
     print("starting stream")
     reddit = get_reddit()
-    c = next(reddit.subreddit('aww').stream.comments())
+    print(message)
+    c = next(reddit.subreddit(message).stream.comments())
+    print(c)
     emit('comment', {'data': c.body})
 
 @app.route('/')
@@ -40,7 +42,7 @@ def index(subreddit=None):
 @app.route('/r/<subreddit>/comments')
 def comments(subreddit=None):
     """Stream comments to the flask application"""
-    return render_template('comments.html')
+    return render_template('comments.html', subreddit=subreddit)
 
 if __name__ == '__main__':
     socketio.run(app)

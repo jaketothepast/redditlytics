@@ -6,6 +6,8 @@ nav {
     width: 100%;
     text-align: center;
     background-color: #6f96d6;
+    left: 0px;
+    top: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
